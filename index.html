@@ -1,22 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="utf-8" />
-	<meta name="description" content="Simple demo Web page for CSE 134B" />
-	<meta name="keywords" content="HTML, CSS, JavaScript" />
-	<meta name="author" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Kyle Wade Website" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Kyle Wade" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="images/favicon.ico" rel="icon" />
-	<link href="styles/main.css" rel="stylesheet" />
-	<title>Kyle Wade's Website</title>
-	<!-- <link href="images/favicon.ico" rel="icon" /> -->
-	<script>
-		window.addEventListener('load', function () {
-			let time = window.performance.timing,
-				complete = time.domComplete - time.domLoading;
-			document.getElementById('page-load-info').innerHTML = `<strong>Page Loaded in ${parseInt(complete)}ms
+    <style>
+      h1 {
+        color: black;
+      }
+      h2 {
+        color: darkred;
+      }
+      p {
+        color: rgb(67, 0, 0);
+      }
+    </style>
+    <title>Kyle Wade's Website</title>
+    <!-- <link href="images/favicon.ico" rel="icon" /> -->
+    <script>
+      window.addEventListener("load", function () {
+        let time = window.performance.timing,
+          complete = time.domComplete - time.domLoading;
+        document.getElementById(
+          "page-load-info"
+        ).innerHTML = `<strong>Page Loaded in ${parseInt(complete)}ms
 			 on ${new Date().toLocaleString("en-US")}</strong>`;
-		});
-	</script>
-</head>
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <section id="user-info-component">
+        <div id="user-info" style="display: none">
+          <nav>
+            <a href="index.html">Kyle Wade</a>
+            <a href="about-me.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="https://kyle1373.github.io/kyle-wade-resume/">Resume</a>
+          </nav>
+          <hr />
+        </div>
+        <script>
+          document.getElementById("user-info").style.display = "block";
+        </script>
+        <noscript class="error"
+          >Error: JavaScript is disabled or blocked.</noscript
+        >
+      </section>
+    </header>
+    <main>
+      <h1><b>Kyle Wade</b></h1>
+      <h2><i>Fullstack web / app developer</i></h2>
+    </main>
+    <canvas id="myCanvas">Your browser does not support the canvas tag.</canvas>
+
+    <audio controls>
+      <source src="images/wind-chimes-37762.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.fillStyle = "#802030";
+      ctx.fillRect(0, 0, 400, 30);
+    </script>
+    <svg width="100" height="100">
+      <circle
+        cx="30"
+        cy="50"
+        r="40"
+        stroke="black"
+        stroke-width="3"
+        fill="red"
+      />
+    </svg>
+    <code>All of my repositories are in my github :)</code>
+    <pre>It's in the footer below V</pre>
+  </body>
+  <footer>
+    <span>
+      <hr />
+      <h3>Website made by Kyle Wade (only html version)</h3>
+      <p>Last updated: February 1st, 2023</p>
+      <br />
+      <a href="https://github.com/kyle1373">Github</a>
+      <button onclick="location.reload();">Reload page</button>
+    </span>
+  </footer>
+</html>

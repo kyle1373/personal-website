@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Kyle Wade Website" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Kyle Wade" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../images/favicon.ico" rel="icon" />
+    <style>
+      h1 {
+        color: black;
+      }
+      h2 {
+        color: darkred;
+      }
+      p {
+        color: rgb(67, 0, 0);
+      }
+    </style>
+    <title>Kyle Wade's Website</title>
+  </head>
+  <body>
+    <header>
+      <section id="user-info-component">
+        <div id="user-info" style="display: none">
+          <nav>
+            <a href="index.html">Kyle Wade</a>
+            <a href="about-me.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="https://kyle1373.github.io/kyle-wade-resume/">Resume</a>
+          </nav>
+          <hr />
+        </div>
+        <script>
+          document.getElementById("user-info").style.display = "block";
+        </script>
+        <noscript class="error"
+          >Error: JavaScript is disabled or blocked.</noscript
+        >
+      </section>
+      <strong>
+        About me
+      </strong>
+    </header>
+    <main>
+      <img
+        src="images/kyle-wade-pfp.png"
+        alt="Kyle Wade"
+        width="300"
+        height="300"
+      />
+      <aside>
+        Hi there! I'm Kyle, a university student passionate about software
+        development and entrepreneurship.
+      </aside>
+    </main>
+  </body>
+  <footer>
+    <span>
+      <hr />
+      <h3>Website made by Kyle Wade (only html version)</h3>
+      <p>Last updated: February 1st, 2023</p>
+      <br />
+      <a href="https://github.com/kyle1373">Github</a>
+      <button onclick="location.reload();">Reload page</button>
+    </span>
+  </footer>
+</html>
