@@ -6,101 +6,83 @@
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Kyle Wade" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../images/favicon.ico" rel="icon" />
+    <link href="images/favicon.ico" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Kyle Wade's Website</title>
     <style>
-      h1 {
-        color: black;
+      main {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      h2 {
-        color: darkred;
+      .information {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        margin-left: 20%;
+        margin-right: 20%;
       }
-      p {
-        color: rgb(67, 0, 0);
+      h6 {
+        font-family: "RobotoCondensed", sans-serif;
+        color: white;
+        font-size: 2vw;
+      }
+      .profile-picture {
+        border-radius: 180px;
+        border: 4px solid white;
+        margin: auto;
+        width: 16vw;
+        height: 16vw;
       }
     </style>
-    <title>Kyle Wade's Website</title>
   </head>
   <body>
+    <!-- The navbar -->
     <header>
-      <section id="user-info-component">
-        <div id="user-info" style="display: none">
-          <nav>
-            <a href="index.html">Kyle Wade</a>
-            <a href="about-me.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="https://kyle1373.github.io/kyle-wade-resume/">Resume</a>
-          </nav>
-          <hr />
-        </div>
-        <script>
-          document.getElementById("user-info").style.display = "block";
-        </script>
-        <noscript class="error"
-          >Error: JavaScript is disabled or blocked.</noscript
-        >
+      <section>
+        <nav>
+          <ul class="nav-icon">
+            <li><a class="link" href="index.html">Kyle Wade</a></li>
+          </ul>
+          <ul class="nav-options">
+            <li><a class="link" href="about-me.html">About me</a></li>
+            <li>
+              <a
+                class="link"
+                href="https://kyle1373.github.io/kyle-wade-resume/"
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </nav>
       </section>
-      <strong> About me </strong>
     </header>
-
-<!-- Main content. It contains my personal information and a contact form -->
-
+    <!-- Main content. It contains a lot of test tags and an introduction. In the future, this will be more centralized and focused -->
     <main>
-      <img
-        src="images/kyle-wade-pfp.png"
-        alt="Kyle Wade"
-        width="300"
-        height="300"
-      />
-      <aside>
-        Hi there! I'm Kyle, a university student passionate about software
-        development and entrepreneurship.
-      </aside>
-      <ol>
-        <li>Playing piano</li>
-        <li>Skiing</li>
-        <li>Hiking</li>
-      </ol>
-      <br />
-      <optgroup label="What do you like:">
-        <option>Chocolate</option>
-        <option>Vanilla</option>
-      </optgroup>
-      <br />
-      <details>I am a vanilla enjoyer :)</details>
-      <br />
-      <form>
-        <fieldset>
-          <legend>Contact me:</legend>
-          <datalist id="contact-preferences">
-            <select value="Freelance"></select>
-            <select value="Work"></select>
-            <select value="Other"></select>
-          </datalist>
-
-          <label for="email">Email:</label>
-          <input type="email" />
-          <br />
-          <br />
-          <label for="inquiry">Inquiry:</label>
-          <textarea title="inquiry"></textarea>
-          <br />
-          <br />
-          <input type="submit" value="Submit" />
-        </fieldset>
-      </form>
+      <div>
+        <div class="information">
+          <img
+            src="images/kyle-wade-pfp.webp"
+            alt="Kyle Wade"
+            class="profile-picture"
+          />
+          <h6>
+            Hi there! I'm Kyle, a university student passionate about software
+            development and entrepreneurship. I enjoy playing the piano, hiking,
+            and skiing!
+          </h6>
+        </div>
+      </div>
     </main>
+
+    <!-- These are a bunch of test elements. They are only here because they did not fit elsewhere on the website -->
   </body>
 
   <!-- Footer of the website. It contains information about my github and a reload page functionality -->
-
   <footer>
     <span>
-      <hr />
-      <h3>Website made by Kyle Wade (only html version)</h3>
-      <p>Last updated: February 1st, 2023</p>
-      <br />
-      <a href="https://github.com/kyle1373">Github</a>
-      <button onclick="location.reload();">Reload page</button>
+      <a class="link" href="https://github.com/kyle1373">Github</a>
     </span>
   </footer>
 </html>

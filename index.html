@@ -7,125 +7,65 @@
     <meta name="author" content="Kyle Wade" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="images/favicon.ico" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Kyle Wade's Website</title>
     <style>
+      main {
+        text-align: center;
+      }
       h1 {
-        color: black;
+        font-family: "RobotoCondensedBold", sans-serif;
+        align-self: center;
+        font-size: 12vw;
+        margin: 0;
+        line-height: 12vw;
+        color: white;
       }
       h2 {
-        color: darkred;
-      }
-      p {
-        color: rgb(67, 0, 0);
+        font-family: "RobotoCondensed", sans-serif;
+        align-self: center;
+        font-size: 3vw;
+
+        margin: 0;
+        line-height: 5vw;
+        color: lightgray;
       }
     </style>
-    <title>Kyle Wade's Website</title>
-    <!-- <link href="images/favicon.ico" rel="icon" /> -->
-    <script>
-      window.addEventListener("load", function () {
-        let time = window.performance.timing,
-          complete = time.domComplete - time.domLoading;
-        document.getElementById(
-          "page-load-info"
-        ).innerHTML = `<strong>Page Loaded in ${parseInt(complete)}ms
-			 on ${new Date().toLocaleString("en-US")}</strong>`;
-      });
-    </script>
   </head>
   <body>
     <!-- The navbar -->
     <header>
-      <section id="user-info-component">
-        <div id="user-info" style="display: none">
-          <nav>
-            <a href="index.html">Kyle Wade</a>
-            <a href="about-me.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="https://kyle1373.github.io/kyle-wade-resume/">Resume</a>
-          </nav>
-          <hr />
-        </div>
-        <script>
-          document.getElementById("user-info").style.display = "block";
-        </script>
-        <noscript class="error"
-          >Error: JavaScript is disabled or blocked.</noscript
-        >
+      <section>
+        <nav>
+          <ul class="nav-icon">
+            <li><a class="link" href="index.html">Kyle Wade</a></li>
+          </ul>
+          <ul class="nav-options">
+            <li><a class="link" href="about-me.html">About me</a></li>
+            <li>
+              <a
+                class="link"
+                href="https://kyle1373.github.io/kyle-wade-resume/"
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </nav>
       </section>
     </header>
     <!-- Main content. It contains a lot of test tags and an introduction. In the future, this will be more centralized and focused -->
     <main>
-      <h1><b>Kyle Wade</b></h1>
-      <h2><i>Fullstack web / app developer</i></h2>
+      <h1 class="float">Kyle Wade</h1>
+      <h2 class="float">Fullstack web / app developer</h2>
     </main>
 
     <!-- These are a bunch of test elements. They are only here because they did not fit elsewhere on the website -->
-
-    <canvas id="myCanvas">Your browser does not support the canvas tag.</canvas>
-
-    <audio controls>
-      <source src="images/wind-chimes-37762.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-
-    <video width="320" height="240" controls>
-      <source src="images/AbstractRotatingCubesVidevo.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-
-    <script>
-      var c = document.getElementById("myCanvas");
-      var ctx = c.getContext("2d");
-      ctx.fillStyle = "#802030";
-      ctx.fillRect(0, 0, 400, 30);
-    </script>
-    <svg width="100" height="100">
-      <circle
-        cx="30"
-        cy="50"
-        r="40"
-        stroke="black"
-        stroke-width="3"
-        fill="red"
-      />
-    </svg>
-
-    <table>
-        <caption>Year progress</caption>
-      <colgroup>
-        <col span="2" style="background-color: yellowgreen" />
-        <col style="background-color: yellow" />
-      </colgroup>
-      <tr>
-        <th>Year</th>
-        <th>Status</th>
-      </tr>
-      <tr>
-        <td>2022</td>
-        <td>Done</td>
-      </tr>
-      <tr>
-        <td>2023</td>
-        <td>Ongoing</td>
-      </tr>
-      <col />
-    </table>
-    <figure>
-        <img src="images/triton.jpg" alt="Triton" style="width:100%">
-        <figcaption>Where I am located</figcaption>
-      </figure>
-    <code>All of my repositories are in my github :)</code>
-    <pre>It's in the footer below V</pre>
   </body>
 
   <!-- Footer of the website. It contains information about my github and a reload page functionality -->
   <footer>
     <span>
-      <hr />
-      <h3>Website made by Kyle Wade (only html version)</h3>
-      <p>Last updated: February 1st, 2023</p>
-      <br />
-      <a href="https://github.com/kyle1373">Github</a>
-      <button onclick="location.reload();">Reload page</button>
+      <a class="link" href="https://github.com/kyle1373">Github</a>
     </span>
   </footer>
 </html>
